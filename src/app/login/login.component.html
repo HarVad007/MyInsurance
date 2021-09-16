@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Login Here</title>
+		<!--  
+		<style type="text/css">
+				h1 {
+					color:green;
+				}
+		</style>
+		-->
+		
+		 
+		 <script>
+		 	function validateLogin() {
+		 		var validate=true;
+		 		//alert('java script1 executed...');
+		 		var username = document.getElementById("uname").value;
+		 		var password = document.getElementById("upass").value;
+		  		//alert(username.length);
+		 		
+		 		if(username == "") {
+		 			//alert('Username cannot be blank');
+		 			document.getElementById("userErrMsg").innerHTML='Cannot be blank';
+		 			validate=false;
+		 		}
+		 		
+		 		if(password == "") {
+		 			//alert('Password cannot be blank');
+		 			document.getElementById("passErrMsg").innerHTML='Cannot be blank';
+		 			validate=false;
+		 		}
+		 		
+		 		if(username.length > 8) {
+		 			//alert('Username cannot be more than 8 letters');	
+		 			document.getElementById("userErrMsg").innerHTML='Cannot exceed 8 letters';
+		 			validate=false;
+		 		}
+		 		
+		 		if(password.length > 8) {
+		 			//alert('Password cannot be more than 8 letters');	
+		 			document.getElementById("passErrMsg").innerHTML='Cannot exceed 8 letters';
+		 			validate=false;
+		 		}
+		 		
+		 		return validate;
+		 	}
+		 	
+		 	function clearPassErrMsg() {
+		 		document.getElementById("passErrMsg").innerHTML='';	
+		 	}
+		 	
+		 	function clearUserErrMsg() {
+		 		document.getElementById("userErrMsg").innerHTML='';	
+		 	}
+		 	
+		 </script>
+	</head>
+
+<body>
+		<h1> Welcome To My AirTravel </h1><hr><h2> Login </h2>
+		
+		<form action="UserDashBoard.html">   
+			<TABLE BORDER=2 CELLSPACING=10 CELLPADDING=10  style="background-color:orange;">
+				<TR> <TD>Enter username </TD> 		<TD><input type=text id="uname" onkeyup="clearUserErrMsg()"><span id="userErrMsg"></span></TD>  </TR>
+				<TR> <TD>Enter password </TD> 	<TD><input type=password id="upass" onkeyup="clearPassErrMsg()"><span id="passErrMsg"></span></TD>  </TR>
+		
+				<TR> <TD><input type=submit value="Login" onclick="return validateLogin()"></TD> </TR>
+			</TABLE>
+		</form>
+		
+		
+		 
+		<div id="d1" class="d">
+			<a href="Home.html">Find Flights Again</a> <br>
+		</div>
+		
+		<div id="d2" class="d">
+			Not a member yet? Sign-Up <a href="registration.html"> here </a> <br>
+		</div>
+		
+		<div id="d3">
+			Forgot password? <a routerLink="forgot"> Click here </a>
+		</div>
+</body>
+
+</html>
+<router-outlet></router-outlet>

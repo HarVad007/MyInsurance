@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Search Your Flight </title>
+	</head>
+
+<body>
+  <app-comments></app-comments>
+  <app-photos></app-photos>
+  
+
+  <!--
+
+  
+  <h1>{{title}}</h1>
+
+	<label> Enter Principal Amount </label><input type="number" name="prinicipal" value={{principal}}><br>
+	<label> Enter Rate Amount </label><input type="number" name="rate" value={{rate}}><br>
+	<label> Enter Duration </label><input type="number" name="years" value={{years}}><br>
+
+	<hr>
+
+	<h3>With ngmodelchange and ngmodel</h3>
+
+	<label> Enter Principal Amount </label><input type="number" name="prinicipal"  [(ngModel)]="principal" (ngModelChange)="calculateSimpleInterest()"><br>
+	<label> Enter Rate Amount </label><input type="number" name="rate"  [(ngModel)]="rate" (ngModelChange)="calculateSimpleInterest()"><br>
+	<label> Enter Duration </label><input type="number" name="years"  [(ngModel)]="years" (ngModelChange)="calculateSimpleInterest()"><br>
+	
+  <hr>
+
+	<h3>With change and ngmodel</h3>
+
+	<label> Enter Principal Amount </label><input type="number" name="prinicipal"  [(ngModel)]="principal" (Change)="calculateSimpleInterest()"><br>
+	<label> Enter Rate Amount </label><input type="number" name="rate"  [(ngModel)]="rate" (Change)="calculateSimpleInterest()"><br>
+	<label> Enter Duration </label><input type="number" name="years"  [(ngModel)]="years" (Change)="calculateSimpleInterest()"><br>
+	
+  <hr>
+	
+	Principal is {{principal}}<br>
+	Rate is {{rate}}<br>
+	For a duration of {{years}} <br>
+
+	<hr>
+
+	<button (click)="calculateSimpleInterest()"> Calculate Simple Interest</button> <br><br>
+	<b><label>Calculated Simple Interest is {{si}}  </label></b><br>
+  <label>Calculated Simple Interest is {{si| currency: 'INR'}}</label><br>
+  <label>Calculated Simple Interest is {{si| currency: 'USD'}}</label><br>
+  <label>Calculated Simple Interest is {{si| currency: 'EUR'}}</label><br>
+
+  <p>Account Opening Date is {{ accountOpeningDate}}</p>
+  <p>Account Opening Date is h:mm a {{ accountOpeningDate | date: 'h:mm a'}}</p>
+  <p>Account Opening Date is M/dd/yyyy {{ accountOpeningDate | date: 'M/dd/yyyy'}}</p>
+  <p>Account Opening Date is shortDate {{ accountOpeningDate | date: 'shortDate'}}</p>
+  <p>Account Opening Date is fullDate {{ accountOpeningDate | date: 'fullDate'}}</p>
+  <p>Square root of 625 is {{625 | sqrt}}</p>
+ 
+  <h1> Welcome To My AirTravel </h1>
+  <hr>
+  <a routerLink="/">Search Flight</a>&nbsp;&nbsp;
+  <a routerLink="login">Sign-In</a>&nbsp;&nbsp;
+  <a routerLink="registration">Sign-Up</a>&nbsp;&nbsp;
+  <router-outlet></router-outlet>
+  
+  <h2> Search Flights </h2>
+
+
+    <div *ngIf="isUserLoggedIn; else myElseBlock">
+          its true
+          Yes,  user is logged in
+    </div>
+    <ng-template #myElseBlock>
+      its false
+      user is not logged in
+    </ng-template>
+		
+		<form action="FoundFlights.html">   
+			<TABLE BORDER=2 CELLSPACING=10 CELLPADDING=10>
+				<TR> 
+        <TD>Enter source city</TD> 
+          
+          <TD>
+            <select name = "selectedValue1" [(ngModel)]="selectedValue1" (ngModelChange) = "calc1()" >
+                <option value="BOM">Mumbai</option>
+                <option value="MAA">Chennai</option>
+                <option value="DEL">Delhi</option>
+                <option value="KOL">Kolkata</option>
+            </select> 
+          </TD> 
+        
+        </TR>
+
+				<TR> <TD>Enter destination city</TD> 
+          
+          <TD>
+            <select name = "selectedValue2" [(ngModel)]="selectedValue2" (ngModelChange) = "calc1()">
+                  <option value="KOL">Kolkata</option>
+                  <option value="DEL">Delhi</option>
+                  <option value="MAA">Chennai</option>
+                  <option value="BOM">Mumbai</option>
+            </select> 
+          
+          </TD>
+
+          </TR>
+          
+          
+				<TR> <TD>Enter date of Journey</TD> 	<TD><input type=date name=doj></TD> </TR>
+			
+				<TR> <TD colspan="2" align="center"><input type=submit value="Search Flights" [disabled]= "flag === false"></TD> </TR>
+			</TABLE>
+		</form>
+
+    <app-showflights></app-showflights>
+    <body>
+      <h1>THIS HEADING BELONGS TO APP.COMPONENT.HTML</h1>
+    
+    <app-button></app-button>
+    </body>
+    <app-registration></app-registration>
+    <app-login>    </app-login>
+    
+   
+    <app-forgotpassword></app-forgotpassword>
+    <app-resetpassword></app-resetpassword>
+   -->
+
+<!--
+
+
+    {{selectedValue1}}<br>
+    {{selectedValue2}}<br>
+    {{flag}}
+-->
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+h1{
+	color:red;
+	text-align:center;
+}
+
+body{
+	background-color:pink;
+	text-align:center;
+	color:white;
+/*
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image:url("src/assets/delta-airlines.jpg");
+	*/
+}	
+
+
+table{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}

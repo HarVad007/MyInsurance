@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Registration Here</title>
+	</head>
+
+<body>
+		<h1> Welcome To My AirTravel </h1>
+		<hr>
+		<button (click)="callConvert()">Convert </button>
+		<button (click)="validateFormsUsername()">Validate</button>
+
+		<h2> Registration </h2>
+		
+		
+		
+			<form (ngSubmit)="registerThisNewUser()" ngNativeValidate >
+			Entered username is {{newRegister.username}} <br>
+			Entered email id is {{newRegister.email}} <br>
+			Entered phone number is {{newRegister.phone}} <br>
+			Entered birthdate is {{newRegister.birthdate}} <br>
+
+			<TABLE BORDER=2 CELLSPACING=10 CELLPADDING=10>
+				<TR>
+					<TD>Enter username </TD> 
+					<TD><input type=text name="username"  [(ngModel)]="newRegister.username" (ngModelChange)="validateFormsUsername()" placeholder="Enter username" required><span id="userErrMsg1"></span></TD>
+				</TR>
+
+				<TR>
+					 <TD>Enter password </TD> 	
+					 <TD><input type=password name="password" [(ngModel)]="newRegister.password" (ngModelChange)="check()" placeholder="Enter password" required ><span id="userErrMsg1"></span></TD>
+				</TR>
+
+				<TR>
+					<TD>Re-Enter password </TD> 	
+					<TD><input type=password name="Repass" [(ngModel)]="Repass" (ngModelChange)="check()" placeholder="Re-Entered password" required ><span></span></TD>
+			   </TR>
+			   <div *ngIf="passSame(); else myElseBlock">
+			   </div>
+
+				   <ng-template #myElseBlock>
+						<p>Enter same password </p>
+				   </ng-template>
+			  
+				<TR>
+					 <TD>Enter email </TD> 
+					 <TD><input type=email name="email" [(ngModel)]="newRegister.email" placeholder="Enter email" required></TD> 
+				</TR>
+
+				<TR>
+					 <TD>Enter phone </TD> 	
+					 <TD><input type=text name="phone" [(ngModel)]="newRegister.phone" placeholder="Enter phone" required></TD> 
+				</TR>
+
+				<TR>
+					 <TD>Enter birthdate </TD> 
+					 <TD><input type=date name="birthdate" [(ngModel)]="newRegister.birthdate" placeholder="Enter birthdate" required></TD>
+				</TR>
+		
+				<TR> <TD><input type=submit value="Registration" [disabled]="flag === false"></TD> </TR>
+
+			</TABLE>
+
+		</form>
+
+		<a href="Login.html">Login here</a> <br>
+		<a href="Home.html">Find Flights </a> <br>
+</body>
+
+</html>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Your Flight </title>
+    </head>
+<body>
+    <h1> Welcome To My AirTravel</h1>
+
+    <a routerLink="/">Home</a>&nbsp;
+    <a routerLink="login">Sign-In</a>&nbsp;
+    <a routerLink="registration">Sign-Up</a>
+
+    <router-outlet></router-outlet>   
+        <hr>
+        <h3>Search Your Flight </h3>
+
+    <form action="FoundFlights.html">
+<TABLE BORDER=2 CELLSPACING=10 CELLPADDING=10 style="background-color:aqua;">
+<th colspan="2" align=center><h2> Search Flights </h2></th>
+<TR> <TD>Enter source city</TD>
+<TD>
+<select>
+<option value="BOM">Mumbai</option>
+<option value="MAA">Chennai</option>
+<option value="DEL">Delhi</option>
+<option value="KOL">Kolkata</option>
+</select>
+</TD>
+</TR>
+<TR> <TD>Enter destination city</TD>
+<TD>
+<select>
+<option value="KOL">Kolkata</option>
+<option value="DEL">Delhi</option>
+<option value="MAA">Chennai</option>
+<option value="MUM">Mumbai</option>
+</select>
+</TR>
+<TR> <TD>Enter date of Journey</TD> <TD><input type=date name=doj></TD> </TR>
+<TR> <TD colspan="2" align="center">
+    <button type="submit" class="btn" 
+    style="background-color: #fb641b"
+    (click)="searchflight()">SearchFlights</button> </TD> </TR>
+</TABLE>
+</form>
+</body>
+</html>
+<router-outlet></router-outlet> 
+
+<!--
+    <video width="320" height="240" autoplay>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+-->
